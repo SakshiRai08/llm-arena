@@ -6,7 +6,7 @@ def vote(label):
     return f"🗳️ Thanks! You voted: **{label}**"
 
 with gr.Blocks(title="LLM Arena") as demo:
-    gr.Markdown("# LLM Arena — one prompt, two models- Llama vs Gemini")
+    gr.Markdown("# LLM Arena — one prompt, two models- Gemini vs Groq Model")
     prompt = gr.Textbox(label="Ask both models the same thing")
     go = gr.Button("⚔️ Battle!", variant="primary")
 
