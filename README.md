@@ -9,3 +9,5 @@ Ask any question and compare answers from:
 '''bash
 pip install -r requirements.txt
 python arena_app.py
+
+public link: https://llm-arena-3qmf.onrender.com/
