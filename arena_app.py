@@ -30,4 +30,4 @@ with gr.Blocks(title="LLM Arena") as demo:
     up_b.click(lambda: vote("👍 Model B"), outputs=verdict)
     down_b.click(lambda: vote("👎 Model B"), outputs=verdict)
 
-demo.launch(server_name="0.0.0.0", server_port=int(os.environ("PORT", 7860)))
+demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
