@@ -1,3 +1,4 @@
+import os
 import gradio as gr
 from arena import battle
 
@@ -29,4 +30,4 @@ with gr.Blocks(title="LLM Arena") as demo:
     up_b.click(lambda: vote("👍 Model B"), outputs=verdict)
     down_b.click(lambda: vote("👎 Model B"), outputs=verdict)
 
-demo.launch(share=True)
+demo.launch(server_name="0.0.0.0", server_port=int(os.environ("PORT", 7860)))
