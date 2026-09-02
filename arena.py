@@ -15,7 +15,7 @@ def battle(prompt):
 
     try:
         # Model A — Google Gemini
-        a = gemini_client.models.generate_content(model="gemini-flash-latest", contents=prompt)
+        a = gemini_client.models.generate_content(model="gemini-3.5-flash", contents=prompt)
         gemini_reply = a.text
     except Exception as e:
         gemini_reply = f"Gemini busy(503), retrying... ({e})\n\nBut Groq Model answered!"
@@ -25,4 +25,4 @@ def battle(prompt):
     groq_reply = b.choices[0].message.content
         
 
-    return gemini_reply, groq_reply 
+    return gemini_reply, groq_reply
